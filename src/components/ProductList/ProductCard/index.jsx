@@ -6,11 +6,9 @@ export const ProductCard = ({ product, setCartList, cartList, cartListFull, setC
         const addProduct = [...cartListFull, product]
         setCartListFull(addProduct)
         
-        if (!cartList.some((e) => e == product)) {
+        if (!cartList.some((e) => e.id == product.id)) {
             const addProductCartList = [...cartList, product]   
             setCartList(addProductCartList)
-            //Por que tem esse atraso?
-            console.log(cartListFull);
         }
     }
 
