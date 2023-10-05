@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import styles from "./style.module.scss"
 
 export const ProductCard = ({ product, setCartList, cartList, cartListFull, setCartListFull, index}) => {
@@ -6,9 +5,12 @@ export const ProductCard = ({ product, setCartList, cartList, cartListFull, setC
     const addProductCart = () => {
         const addProduct = [...cartListFull, product]
         setCartListFull(addProduct)
+        
         if (!cartList.some((e) => e == product)) {
             const addProductCartList = [...cartList, product]   
             setCartList(addProductCartList)
+            //Por que tem esse atraso?
+            console.log(cartListFull);
         }
     }
 

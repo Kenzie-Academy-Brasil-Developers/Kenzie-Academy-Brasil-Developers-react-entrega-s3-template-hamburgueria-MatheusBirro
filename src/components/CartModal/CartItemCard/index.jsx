@@ -7,7 +7,6 @@ export const CartItemCard = ({ product, setCartList, cartList, cartListFull, set
          return e.id != product.id 
       })
       setCartListFull(newCartListFull)
-      console.log(cartListFull);
       const newCartList = cartList.filter((e)=> {
          return e.id != product.id 
       })

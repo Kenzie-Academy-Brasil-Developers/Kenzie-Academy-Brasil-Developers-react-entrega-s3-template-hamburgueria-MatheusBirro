@@ -14,7 +14,6 @@ function App() {
   const [cartList, setCartList] = useState(
     localCartList? JSON.parse(localCartList) : []
   )
-
   useEffect(()=>{
     localStorage.setItem("@cartListFull",JSON.stringify(cartListFull))
   },[cartListFull])
@@ -23,7 +22,6 @@ function App() {
     localStorage.setItem("@cartList",JSON.stringify(cartList))
   },[cartList])
   
-
   return (
     <>
       <HomePage setIsOpen={setIsOpen} setCartList={setCartList} cartList={cartList} cartListFull={cartListFull} setCartListFull={setCartListFull}/>
