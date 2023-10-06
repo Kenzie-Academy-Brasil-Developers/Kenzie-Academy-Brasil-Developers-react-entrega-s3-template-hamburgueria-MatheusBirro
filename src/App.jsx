@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { ToastContainer} from "react-toastify"
 import { CartModal } from "./components/CartModal"
 import { HomePage } from "./pages/HomePage"
 import "./styles/globalStyles.scss"
@@ -26,6 +27,7 @@ function App() {
     <>
       <HomePage setIsOpen={setIsOpen} setCartList={setCartList} cartList={cartList} cartListFull={cartListFull} setCartListFull={setCartListFull}/>
       {isOpen? <CartModal setCartList={setCartList} cartList={cartList} setIsOpen={setIsOpen} cartListFull={cartListFull} setCartListFull={setCartListFull}/> : null}
+      <ToastContainer position="bottom-right"/>
     </>
   )
 }

@@ -17,7 +17,7 @@ export const HomePage = ({setIsOpen, setCartList, cartList, cartListFull, setCar
 
    return (
       <>
-         <Header setIsOpen={setIsOpen} cartListFull={cartListFull}/>
+         <Header setIsOpen={setIsOpen} cartList={cartList}/>
          <main className={styles.main__container}>
             <ProductList productList={productList} setCartList={setCartList} cartList={cartList} cartListFull={cartListFull} setCartListFull={setCartListFull}/>
          </main>

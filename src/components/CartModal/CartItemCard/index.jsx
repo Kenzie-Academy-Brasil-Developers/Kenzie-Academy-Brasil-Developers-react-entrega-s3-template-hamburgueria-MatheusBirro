@@ -1,5 +1,6 @@
 import { MdDelete } from "react-icons/md"
 import styles from "./style.module.scss"
+
 export const CartItemCard = ({ product, setCartList, cartList, cartListFull, setCartListFull}) => {
 
    const removeProduct = () => {
@@ -12,7 +13,7 @@ export const CartItemCard = ({ product, setCartList, cartList, cartListFull, set
       })
       setCartList(newCartList)
    }
-
+  
    return (
       <li className={styles.item__container}>
          <div>

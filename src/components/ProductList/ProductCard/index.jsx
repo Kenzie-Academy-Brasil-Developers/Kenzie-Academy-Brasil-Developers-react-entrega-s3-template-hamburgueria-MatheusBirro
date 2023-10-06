@@ -1,3 +1,5 @@
+import { toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 import styles from "./style.module.scss"
 
 export const ProductCard = ({ product, setCartList, cartList, cartListFull, setCartListFull, index}) => {
@@ -9,6 +11,9 @@ export const ProductCard = ({ product, setCartList, cartList, cartListFull, setC
         if (!cartList.some((e) => e.id == product.id)) {
             const addProductCartList = [...cartList, product]   
             setCartList(addProductCartList)
+            toast("Produto adicionado ao carrinho")
+        }else{
+            toast.error("Este produto não pode ser adicionado novamente")
         }
     }
 
